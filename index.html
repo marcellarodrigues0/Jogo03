@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17221f">
+  <meta name="description" content="Explore Teyvat, conheça personagens e acompanhe as notícias de Genshin Impact.">
+  <title>Genshin Impact — Teyvat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+    <a class="brand" href="#inicio">
+      <span class="brand-symbol">✧</span>
+      <span class="brand-name">GENSHIN<small>IMPACT</small></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio" class="nav-link active">INÍCIO</a>
+      <a href="#noticias" class="nav-link">NOTÍCIAS</a>
+      <a href="#personagens" class="nav-link">PERSONAGENS</a>
+      <a href="#regioes" class="nav-link">REGIÕES</a>
+      <a href="#sobre" class="nav-link">INFORMAÇÕES</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="login-button" data-modal="loginModal">Entrar </button>
+      <a class="download-button" href="#baixar">Baixar</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <video class="hero-video" autoplay muted loop playsinline
+        poster="assets/paisagem-teyvat.png">
+        <source src="assets/bg.3e78e80.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-fallback"></div>
+      <div class="hero-shade"></div>
+
+      <aside class="social-bar">
+        <button class="social-toggle" id="socialToggle" aria-label="Recolher redes">‹</button>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">▶</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">◎</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">f</a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">♪</a>
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">◉</a>
+        <a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">◒</a>
+      </aside>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">UM MUNDO ALÉM DOS CÉUS</div>
+        <h1>GENSHIN<br><span>IMPACT</span></h1>
+        <p>Uma jornada por um mundo de magia, mistérios e aventuras.</p>
+        <button class="primary-button" data-modal="storyModal">✦ EXPLORAR TEYVAT</button>
+      </div>
+
+      <a href="#noticias" class="scroll-cue">
+        <span>DESCUBRA TEYVAT</span>
+        <span class="scroll-arrow">⌄</span>
+      </a>
+
+      <div class="hero-version">AVENTURE-SE ALÉM DOS CÉUS</div>
+    </section>
+
+    <section class="news-section" id="noticias">
+      <div class="news-backdrop"></div>
+
+      <div class="section-heading">
+        <span class="section-kicker">FIQUE POR DENTRO</span>
+        <h2>NOTÍCIAS</h2>
+        <span class="heading-line"></span>
+      </div>
+
+      <div class="featured-news" id="featuredNews">
+        <article class="feature-card">
+          <div class="feature-image image-one">
+            <img src="assets/Escoffyer.jpg" alt="Escoffier" loading="lazy">
+            <span class="image-label">ESCOFFIER · NOTÍCIAS RECENTES</span>
+          </div>
+          <div class="feature-copy">
+            <span class="category-tag">DESTAQUE</span>
+            <h3>Pronta para apimentar as coisas! | Escoffier</h3>
+            <p>Conheça a renomada chef de Fontaine e suas aventuras culinárias.</p>
+            <div class="card-footer">
+              <time datetime="2026-10-11">11/10/2026</time>
+              <button class="text-link"
+                data-article="Pronta para apimentar as coisas! | Escoffier"
+                data-image="assets/Escoffyer.jpg">Informações ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-image image-two">
+            <img src="assets/Conteudo.jpg" alt="Conteúdo de Teyvat" loading="lazy">
+            <span class="image-label">GENSHIN IMPACT</span>
+          </div>
+          <div class="feature-copy">
+            <span class="category-tag">ANIMAÇÃO</span>
+            <h3>Uma história além do destino</h3>
+            <p>Reviva momentos marcantes e conheça os segredos dos aventureiros.</p>
+            <div class="card-footer">
+              <time datetime="2026-10-10">10/10/2026</time>
+              <button class="text-link" data-article="Uma história além do destino"
+                data-image="assets/Conteudo.jpg">Informações ↗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-image image-three">
+            <img src="assets/7.1.jpg" alt="Histórias de Teyvat" loading="lazy">
+            <span class="image-label">HISTÓRIAS DE TEYVAT</span>
+          </div>
+          <div class="feature-copy">
+            <span class="category-tag">HISTÓRIA</span>
+            <h3>O silêncio também guarda segredos</h3>
+            <p>Descubra histórias e acontecimentos deste mundo misterioso.</p>
+            <div class="card-footer">
+              <time datetime="2026-10-09">09/10/2026</time>
+              <button class="text-link" data-article="O silêncio também guarda segredos"
+                data-image="assets/7.1.jpg">Informações ↗</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="news-list-area">
+        <div class="news-filters">
+          <button class="filter-button selected" data-filter="todos">Mais Recentes</button>
+          <button class="filter-button" data-filter="informacoes">Informações</button>
+          <button class="filter-button" data-filter="anuncios">Anúncios</button>
+          <button class="filter-button" data-filter="eventos">Eventos</button>
+        </div>
+
+        <div class="news-list" id="newsList">
+          <article class="news-row" data-category="eventos">
+            <div class="list-image">
+              <img src="assets/O evento.jpg" alt="Prévia de eventos" loading="lazy">
+            </div>
+            <div class="list-copy">
+              <span class="list-category">EVENTOS</span>
+              <h3>Prévia de Eventos — Uma nova aventura começa</h3>
+              <p>Confira esta prévia visual de eventos e atividades.</p>
+            </div>
+            <time datetime="2026-10-12">12/10/2026</time>
+            <button class="text-link" data-article="Prévia de Eventos"
+              data-image="assets/O evento.jpg">Informações</button>
+          </article>
+
+          <article class="news-row" data-category="eventos">
+            <div class="list-image">
+              <img src="assets/7.2.jpg" alt="Evento especial" loading="lazy">
+            </div>
+            <div class="list-copy">
+              <span class="list-category">EVENTOS</span>
+              <h3>Um novo desafio espera por você</h3>
+              <p>Prepare sua equipe para novos desafios.</p>
+            </div>
+            <time datetime="2026-10-12">12/10/2026</time>
+            <button class="text-link" data-article="Um novo desafio espera por você"
+              data-image="assets/7.2.jpg">Informações</button>
+          </article>
+
+          <article class="news-row" data-category="informacoes">
+            <div class="list-image">
+              <img src="assets/Escoffyer.jpg" alt="Notícias recentes" loading="lazy">
+            </div>
+            <div class="list-copy">
+              <span class="list-category">INFORMAÇÕES</span>
+              <h3>Notícias recentes de Teyvat</h3>
+              <p>Confira as novidades apresentadas neste projeto.</p>
+            </div>
+            <time datetime="2026-10-11">11/10/2026</time>
+            <button class="text-link" data-article="Notícias recentes"
+              data-image="assets/Escoffyer.jpg">Informações</button>
+          </article>
+
+          <article class="news-row" data-category="anuncios">
+            <div class="list-image">
+              <img src="assets/Dinamica.jpg" alt="Novidades do jogo" loading="lazy">
+            </div>
+            <div class="list-copy">
+              <span class="list-category">ANÚNCIOS</span>
+              <h3>Novidades para os viajantes</h3>
+              <p>Acompanhe as novidades apresentadas nesta página.</p>
+            </div>
+            <time datetime="2026-10-10">10/10/2026</time>
+            <button class="text-link" data-article="Novidades para os viajantes"
+              data-image="assets/Dinamica.jpg">Informações</button>
+          </article>
+
+          <article class="news-row" data-category="informacoes">
+            <div class="list-image">
+              <img src="assets/7.3.jpg" alt="Histórias de personagens" loading="lazy">
+            </div>
+            <div class="list-copy">
+              <span class="list-category">INFORMAÇÕES</span>
+              <h3>Histórias e segredos de Teyvat</h3>
+              <p>Descubra detalhes sobre personagens e suas jornadas.</p>
+            </div>
+            <time datetime="2026-10-10">10/10/2026</time>
+            <button class="text-link" data-article="Histórias e segredos de Teyvat"
+              data-image="assets/7.3.jpg">Informações</button>
+          </article>
+        </div>
+
+        <p class="empty-news" id="emptyNews" hidden>Nenhuma notícia nesta categoria.</p>
+      </div>
+    </section>
+
+    <section class="regions-section" id="regioes">
+      <div class="section-heading light-heading">
+        <span class="section-kicker">UM MUNDO DE POSSIBILIDADES</span>
+        <h2>EXPLORE TEYVAT</h2>
+        <p>Sete nações. Diferentes culturas. Um destino ainda desconhecido.</p>
+        <span class="heading-line"></span>
+      </div>
+
+      <div class="region-list">
+        <article class="region-card mondstadt">
+          <div class="region-copy">
+            <span>NAÇÃO DA LIBERDADE</span><h3>MONDSTADT</h3>
+            <p>Onde o vento carrega canções e a liberdade floresce.</p>
+            <button data-region="Mondstadt">DESCOBRIR REGIÃO ↗</button>
+          </div><span class="region-number">01</span>
+        </article>
+        <article class="region-card liyue">
+          <div class="region-copy">
+            <span>NAÇÃO DOS CONTRATOS</span><h3>PORTO DE LIYUE</h3>
+            <p>Montanhas antigas, tradições e histórias milenares.</p>
+            <button data-region="Porto de Liyue">DESCOBRIR REGIÃO ↗</button>
+          </div><span class="region-number">02</span>
+        </article>
+        <article class="region-card inazuma">
+          <div class="region-copy">
+            <span>NAÇÃO DA ETERNIDADE</span><h3>INAZUMA</h3>
+            <p>Ilhas distantes sob o olhar do trovão.</p>
+            <button data-region="Inazuma">DESCOBRIR REGIÃO ↗</button>
+          </div><span class="region-number">03</span>
+        </article>
+        <article class="region-card sumeru">
+          <div class="region-copy">
+            <span>NAÇÃO DA SABEDORIA</span><h3>SUMERU</h3>
+            <p>Florestas profundas e segredos guardados pelo conhecimento.</p>
+            <button data-region="Sumeru">DESCOBRIR REGIÃO ↗</button>
+          </div><span class="region-number">04</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="characters-section" id="personagens">
+      <div class="section-heading">
+        <span class="section-kicker">ENCONTRE SEU DESTINO</span>
+        <h2>PERSONAGENS</h2>
+        <p>Conheça alguns dos aventureiros que tornam Teyvat inesquecível.</p>
+        <span class="heading-line"></span>
+      </div>
+      <div class="character-grid">
+        <article class="character-card character-amber">
+          <div class="character-glow"></div><span class="element-symbol">✦</span>
+          <h3>AVENTUREIRA</h3><p>Coragem para enfrentar o desconhecido.</p>
+        </article>
+        <article class="character-card character-blue">
+          <div class="character-glow"></div><span class="element-symbol">❄</span>
+          <h3>GUARDIÃ DO GELO</h3><p>Calma e precisão em cada movimento.</p>
+        </article>
+        <article class="character-card character-purple">
+          <div class="character-glow"></div><span class="element-symbol">⚡</span>
+          <h3>FORÇA DO TROVÃO</h3><p>Uma presença que muda o curso da batalha.</p>
+        </article>
+      </div>
+      <p class="disclaimer">Os cartões acima são elementos demonstrativos do projeto.</p>
+    </section>
+
+    <section class="download-section" id="baixar">
+      <div class="download-content">
+        <span class="section-kicker">SUA PRÓXIMA AVENTURA</span>
+        <h2>O MUNDO DE TEYVAT ESPERA POR VOCÊ</h2>
+        <p>Prepare-se para explorar, lutar e descobrir histórias extraordinárias.</p>
+        <div class="platform-buttons">
+          <button data-modal="downloadModal">PC WINDOWS</button>
+          <button data-modal="downloadModal">PLAYSTATION</button>
+          <button data-modal="downloadModal">MOBILE</button>
+        </div>
+        <a class="official-link" href="https://genshin.hoyoverse.com/pt/home"
+          target="_blank" rel="noopener noreferrer">Visitar o site oficial ↗</a>
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <h2>UMA JORNADA SEM FIM</h2>
+      <p>Explore regiões, conheça personagens e desvende os mistérios de um mundo fantástico.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#inicio">GENSHIN IMPACT</a>
+    <p>Projeto de estudo inspirado no universo de Genshin Impact.</p>
+    <p>Este projeto não é oficial e não possui vínculo com a HoYoverse.</p>
+    <a href="https://genshin.hoyoverse.com/pt/home" target="_blank"
+      rel="noopener noreferrer">Site oficial</a>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+  <div class="modal" id="storyModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <span class="section-kicker">BEM-VINDO A TEYVAT</span>
+      <h2>Uma jornada começa</h2>
+      <p>Um vasto mundo espera por você. Atravesse paisagens, conheça culturas e descubra os segredos das sete nações.</p>
+      <button class="primary-button modal-action" data-close-modal>CONTINUAR EXPLORANDO</button>
+    </div>
+  </div>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <span class="section-kicker">CONTA</span><h2>Entrar</h2>
+      <p>Esta reprodução visual não possui sistema de autenticação. Para acessar sua conta, use o site oficial.</p>
+      <a class="primary-button modal-action" href="https://account.hoyoverse.com/"
+        target="_blank" rel="noopener noreferrer">ACESSAR CONTA OFICIAL</a>
+    </div>
+  </div>
+
+  <div class="modal" id="downloadModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <span class="section-kicker">DOWNLOAD OFICIAL</span><h2>Prepare sua aventura</h2>
+      <p>Para baixar o jogo real com segurança, visite a página oficial de Genshin Impact.</p>
+      <a class="primary-button modal-action" href="https://genshin.hoyoverse.com/pt/home"
+        target="_blank" rel="noopener noreferrer">IR AO SITE OFICIAL</a>
+    </div>
+  </div>
+
+  <div class="modal" id="articleModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <img id="articleModalImage" class="article-detail-image" src="" alt="" hidden>
+      <span class="section-kicker">NOTÍCIAS DE TEYVAT</span>
+      <h2 id="articleModalTitle">Notícia</h2>
+      <p>Esta janela faz parte da reprodução visual. Consulte o site oficial para notícias reais.</p>
+      <a class="primary-button modal-action" href="https://genshin.hoyoverse.com/pt/news"
+        target="_blank" rel="noopener noreferrer">VER NOTÍCIAS OFICIAIS</a>
+    </div>
+  </div>
+
+  <div class="modal" id="regionModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fechar">×</button>
+      <span class="section-kicker">REGIÕES DE TEYVAT</span>
+      <h2 id="regionModalTitle">Região</h2>
+      <p id="regionModalDescription">Explore os cenários e as histórias desta região.</p>
+      <button class="primary-button modal-action" data-close-modal>VOLTAR À EXPLORAÇÃO</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
